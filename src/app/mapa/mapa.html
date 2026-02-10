@@ -1,0 +1,58 @@
+<div class="flex h-screen bg-slate-100">
+
+  <!-- SIDEBAR HERRAMIENTAS -->
+  <aside class="w-80 bg-slate-900 text-slate-100 flex flex-col">
+
+    <div class="h-16 flex items-center px-6 border-b border-slate-800">
+      <span class="font-semibold text-lg">GeoPortal</span>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+
+      <!-- HERRAMIENTAS -->
+      <p-card class="bg-slate-800 text-slate-100">
+        <h3 class="font-semibold mb-2">Capas</h3>
+        <div class="space-y-2">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" checked />
+            <span>Vías</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" />
+            <span>Predios</span>
+          </label>
+        </div>
+      </p-card>
+
+      <p-card class="bg-slate-800 text-slate-100">
+        <h3 class="font-semibold mb-2">Herramientas</h3>
+        <button class="w-full bg-indigo-600 py-2 rounded-md">
+          Medir distancia
+        </button>
+      </p-card>
+
+    </div>
+
+  </aside>
+
+  <!-- MAPA -->
+  <div class="flex-1 relative">
+
+    <!-- TOOLBAR FLOTANTE -->
+    <div class="absolute top-4 right-4 z-[1000] bg-white rounded-xl shadow-md">
+      <button class="p-3 hover:bg-slate-100">
+        <i class="pi pi-plus"></i>
+      </button>
+      <button class="p-3 hover:bg-slate-100">
+        <i class="pi pi-minus"></i>
+      </button>
+      <button class="p-3 hover:bg-slate-100">
+        <i class="pi pi-map-marker"></i>
+      </button>
+    </div>
+
+    <!-- MAPA LEAFLET -->
+    <div id="map" class="h-full w-full"></div>
+
+  </div>
+</div>
